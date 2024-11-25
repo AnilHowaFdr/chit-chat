@@ -34,7 +34,7 @@ body {
   background: teal;
 }
 .sign-up-label {
-  @apply text-[10px] text-[#747474] m-0;
+  @apply text-[12px] text-[#747474] m-0;
 }
 .sign-up-link {
   @apply text-[11px] underline decoration-[teal] text-[teal] cursor-pointer font-extrabold ml-px;
