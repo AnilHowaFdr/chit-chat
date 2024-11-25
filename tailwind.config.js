@@ -7,10 +7,9 @@ export default {
     },
     extend: {
       colors: {
-        brand: "#9ABF80",
-        primary: "#E5E3D4",
-        second: "#1C325B",
-        third: "#6A669D",
+        primary: "#222222",
+        secondary: "#7A7A7A",
+        brand: "#32375C",
       },
     },
   },

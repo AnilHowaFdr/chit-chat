@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-brand;
+  @apply bg-[#f1f1f1];
 }
 .form-container {
   @apply w-[350px] h-[500px] bg-white shadow-[rgba(0,0,0,0.35)_0px_5px_15px] box-border px-[30px] py-5 rounded-[10px];
@@ -24,7 +24,7 @@ body {
   @apply underline text-end text-[#747474] decoration-[#747474] m-0;
 }
 .page-link-label {
-  @apply cursor-pointer text-[9px] font-bold hover:text-black;
+  @apply cursor-pointer text-[12px] font-bold hover:text-black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }

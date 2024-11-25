@@ -7,10 +7,15 @@ import {
   Contact,
 } from "responsive-navigation";
 import { FaRegUserCircle } from "react-icons/fa";
-import { IoHomeOutline } from "react-icons/io5";
+import {
+  IoChatbubbleOutline,
+  IoChatbubblesOutline,
+  IoHomeOutline,
+} from "react-icons/io5";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loggedUserData } from "../reducer/userSlice";
+import { RiLogoutCircleFill } from "react-icons/ri";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -48,7 +53,7 @@ const Navbar = () => {
               path === "/chat" ? "bg-brand text-white" : "bg-white text-brand"
             } py-3 px-10 w-fit items-center rounded-xl`}
           >
-            <IoHomeOutline />
+            <IoChatbubblesOutline />
             <p className="pl-2">Chat</p>
           </Link>
         </NavItem>
@@ -75,8 +80,9 @@ const Navbar = () => {
           </Link>
           <button
             onClick={handelLogout}
-            className="bg-brand py-2 px-4 text-white rounded-lg w-full mt-8"
+            className="bg-brand py-2 px-4 flex justify-center items-center gap-2 text-white rounded-lg w-full mt-8"
           >
+            <RiLogoutCircleFill className="text-3xl" />
             Log Out
           </button>
         </div>
