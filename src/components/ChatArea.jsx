@@ -174,7 +174,7 @@ const ChatArea = () => {
           value={message}
           type="text"
           placeholder="Text Here"
-          className="w-4/5 h-5 max-h-20 bg-transparent outline-none"
+          className="w-4/5 h-5 max-h-20 bg-transparent outline-hidden"
         />
         <button>
           <BsEmojiSmile

@@ -76,7 +76,7 @@ const Profile = () => {
     );
   };
   return (
-    <div className="p-10 bg-[#F4F4F4] w-fit flex flex-col items-center gap-10 m-auto mt-24 shadow">
+    <div className="p-10 bg-[#F4F4F4] w-fit flex flex-col items-center gap-10 m-auto mt-24 shadow-sm">
       <ToastContainer
         position="top-right"
         autoClose={5000}
