@@ -84,7 +84,7 @@ const Registration = () => {
   };
   useEffect(() => {
     if (loggedUser) {
-      navigate("/");
+      navigate("/login");
     }
   }, []);
   return (

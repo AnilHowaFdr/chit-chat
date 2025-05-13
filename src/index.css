@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
-layer(base);
-
-@import 'tailwindcss';
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @theme {
   --font-*: initial;
@@ -29,95 +27,96 @@ layer(base);
     border-color: var(--color-gray-200, currentcolor);
   }
 }
+@layer utilities {
+  body {
+    @apply bg-[#f1f1f1];
+  }
+  .form-container {
+    @apply w-[350px] h-[500px] bg-white shadow-[rgba(0,0,0,0.35)_0px_5px_15px] box-border px-[30px] py-5 rounded-[10px];
+  }
+  .title {
+    @apply text-center text-2xl font-extrabold mt-2.5 mb-[30px] mx-0;
+  }
+  .form {
+    @apply w-full flex flex-col gap-[18px] mb-[15px];
+  }
+  .input {
+    @apply border box-border px-[15px] py-3 rounded-[20px] border-solid border-[#c0c0c0];
+    outline: 0 !important;
+  }
+  .page-link {
+    @apply underline text-end text-[#747474] decoration-[#747474] m-0;
+  }
+  .page-link-label {
+    @apply cursor-pointer text-[12px] font-bold hover:text-black;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .form-btn {
+    @apply text-[white] cursor-pointer shadow-[rgba(0,0,0,0.24)_0px_3px_8px] px-[15px] py-2.5 rounded-[20px] border-0 active:shadow-none;
+    outline: 0 !important;
+    background: teal;
+  }
+  .sign-up-label {
+    @apply text-[12px] text-[#747474] m-0;
+  }
+  .sign-up-link {
+    @apply text-[11px] underline decoration-[teal] text-[teal] cursor-pointer font-extrabold ml-px;
+  }
+  .buttons-container {
+    @apply w-full flex flex-col justify-start gap-[15px] mt-5;
+  }
+  .apple-login-button,
+  .google-login-button {
+    @apply box-border shadow-[rgba(0,0,0,0.16)_0px_10px_36px_0px,rgba(0,0,0,0.06)_0px_0px_0px_1px] cursor-pointer flex justify-center items-center text-[11px] gap-[5px] px-[15px] py-2.5 rounded-[20px];
+  }
+  .apple-login-button {
+    @apply bg-black text-white border-2 border-solid border-black;
+  }
+  .google-login-button {
+    @apply border-2 border-solid border-[#747474];
+  }
+  .apple-icon,
+  .google-icon {
+    @apply text-lg mb-px;
+  }
 
-body {
-  @apply bg-[#f1f1f1];
-}
-.form-container {
-  @apply w-[350px] h-[500px] bg-white shadow-[rgba(0,0,0,0.35)_0px_5px_15px] box-border px-[30px] py-5 rounded-[10px];
-}
-.title {
-  @apply text-center text-2xl font-extrabold mt-2.5 mb-[30px] mx-0;
-}
-.form {
-  @apply w-full flex flex-col gap-[18px] mb-[15px];
-}
-.input {
-  @apply border box-border px-[15px] py-3 rounded-[20px] border-solid border-[#c0c0c0];
-  outline: 0 !important;
-}
-.page-link {
-  @apply underline text-end text-[#747474] decoration-[#747474] m-0;
-}
-.page-link-label {
-  @apply cursor-pointer text-[12px] font-bold hover:text-black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-.form-btn {
-  @apply text-[white] cursor-pointer shadow-[rgba(0,0,0,0.24)_0px_3px_8px] px-[15px] py-2.5 rounded-[20px] border-0 active:shadow-none;
-  outline: 0 !important;
-  background: teal;
-}
-.sign-up-label {
-  @apply text-[12px] text-[#747474] m-0;
-}
-.sign-up-link {
-  @apply text-[11px] underline decoration-[teal] text-[teal] cursor-pointer font-extrabold ml-px;
-}
-.buttons-container {
-  @apply w-full flex flex-col justify-start gap-[15px] mt-5;
-}
-.apple-login-button,
-.google-login-button {
-  @apply box-border shadow-[rgba(0,0,0,0.16)_0px_10px_36px_0px,rgba(0,0,0,0.06)_0px_0px_0px_1px] cursor-pointer flex justify-center items-center text-[11px] gap-[5px] px-[15px] py-2.5 rounded-[20px];
-}
-.apple-login-button {
-  @apply bg-black text-white border-2 border-solid border-black;
-}
-.google-login-button {
-  @apply border-2 border-solid border-[#747474];
-}
-.apple-icon,
-.google-icon {
-  @apply text-lg mb-px;
-}
+  .sidenavbar-main .navbar_main ul .nav-item {
+    @apply shadow-none;
+  }
 
-.sidenavbar-main .navbar_main ul .nav-item {
-  @apply shadow-none;
-}
+  .name {
+    @apply font-primary font-semibold text-lg text-black;
+  }
 
-.name {
-  @apply font-primary font-semibold text-lg text-black;
-}
+  .cardscroll::-webkit-scrollbar {
+    @apply w-2;
+  }
 
-.cardscroll::-webkit-scrollbar {
-  @apply w-2;
-}
+  /* Track */
+  .cardscroll::-webkit-scrollbar-track {
+    @apply bg-[#f1f1f1] rounded-xl;
+  }
 
-/* Track */
-.cardscroll::-webkit-scrollbar-track {
-  @apply bg-[#f1f1f1] rounded-xl;
-}
+  /* Handle */
+  .cardscroll::-webkit-scrollbar-thumb {
+    @apply bg-brand rounded-xl;
+  }
 
-/* Handle */
-.cardscroll::-webkit-scrollbar-thumb {
-  @apply bg-brand rounded-xl;
-}
+  .sidebar-wraper .sidebar-arrow {
+    @apply hidden;
+  }
 
-.sidebar-wraper .sidebar-arrow {
-  @apply hidden;
-}
-
-.reveive-message {
-  @apply bg-[#E9E9E9] p-2 rounded-lg w-fit text-base font-primary max-w-[60%] my-1;
-}
-.send-message {
-  @apply bg-[#E9E9E9] p-2 rounded-lg w-fit text-base font-primary ml-auto max-w-[60%] my-1;
-}
-.messageArea > div {
-  padding: 0 10px;
-}
-.messageArea > div::-webkit-scrollbar {
-  display: none;
+  .reveive-message {
+    @apply bg-[#E9E9E9] p-2 rounded-lg w-fit text-base font-primary max-w-[60%] my-1;
+  }
+  .send-message {
+    @apply bg-[#E9E9E9] p-2 rounded-lg w-fit text-base font-primary ml-auto max-w-[60%] my-1;
+  }
+  .messageArea > div {
+    padding: 0 10px;
+  }
+  .messageArea > div::-webkit-scrollbar {
+    display: none;
+  }
 }
